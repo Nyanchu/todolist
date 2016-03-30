@@ -45,7 +45,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = AppDelegate;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		D90D93561C72B8AE00343957 /* ViewControllers */ = {
@@ -54,7 +54,7 @@
 				D90D935D1C7B294100343957 /* AddTodoController.swift */,
 				D9C490EF1C72AFE400CE06D5 /* ListViewController.swift */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D90D93571C72B8CD00343957 /* Classes */ = {
@@ -63,38 +63,38 @@
 				D90D93551C72B8A300343957 /* AppDelegate */,
 				D9F259BE1CABED55004F5BF1 /* Entity */,
 				D90D93591C72B90000343957 /* Models */,
-				D90D93581C72B8F400343957 /* Views */,
 				D90D93561C72B8AE00343957 /* ViewControllers */,
+				D90D93581C72B8F400343957 /* Views */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		D90D93581C72B8F400343957 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D90D93591C72B90000343957 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D90D935A1C72B91B00343957 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Vendors;
+			path = Vendors;
 			sourceTree = "<group>";
 		};
 		D9C490D11C72AF9E00CE06D5 = {
 			isa = PBXGroup;
 			children = (
-				D9C490DC1C72AF9E00CE06D5 /* TodoIt */,
 				D9C490DB1C72AF9E00CE06D5 /* Products */,
+				D9C490DC1C72AF9E00CE06D5 /* TodoIt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,11 +112,11 @@
 				D90D93571C72B8CD00343957 /* Classes */,
 				D90D935A1C72B91B00343957 /* Vendors */,
 				D9C490DD1C72AF9E00CE06D5 /* AppDelegate.swift */,
+				D9C490E41C72AF9E00CE06D5 /* Assets.xcassets */,
+				D9C490E91C72AF9E00CE06D5 /* Info.plist */,
+				D9C490E61C72AF9E00CE06D5 /* LaunchScreen.storyboard */,
 				D9C490E11C72AF9E00CE06D5 /* Main.storyboard */,
 				D90D93801C8523AC00343957 /* TodoIt.xcdatamodeld */,
-				D9C490E41C72AF9E00CE06D5 /* Assets.xcassets */,
-				D9C490E61C72AF9E00CE06D5 /* LaunchScreen.storyboard */,
-				D9C490E91C72AF9E00CE06D5 /* Info.plist */,
 			);
 			path = TodoIt;
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 			children = (
 				D90D93831C8526FC00343957 /* Todo.swift */,
 			);
-			name = Entity;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +218,7 @@
 				D9C490E21C72AF9E00CE06D5 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		D9C490E61C72AF9E00CE06D5 /* LaunchScreen.storyboard */ = {
@@ -226,6 +227,7 @@
 				D9C490E71C72AF9E00CE06D5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
