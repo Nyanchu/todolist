@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D90D935C1C73619300343957 /* ListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D935B1C73619300343957 /* ListViewDelegate.swift */; };
 		D90D935E1C7B294100343957 /* AddTodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D935D1C7B294100343957 /* AddTodoController.swift */; };
 		D90D93821C8523AC00343957 /* TodoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D90D93801C8523AC00343957 /* TodoIt.xcdatamodeld */; };
 		D90D93841C8526FC00343957 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D93831C8526FC00343957 /* Todo.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D90D935B1C73619300343957 /* ListViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewDelegate.swift; sourceTree = "<group>"; };
 		D90D935D1C7B294100343957 /* AddTodoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoController.swift; sourceTree = "<group>"; };
 		D90D93811C8523AC00343957 /* TodoIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoIt.xcdatamodel; sourceTree = "<group>"; };
 		D90D93831C8526FC00343957 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -46,7 +44,6 @@
 		D90D93551C72B8A300343957 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				D90D935B1C73619300343957 /* ListViewDelegate.swift */,
 			);
 			name = AppDelegate;
 			sourceTree = "<group>";
@@ -64,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				D90D93551C72B8A300343957 /* AppDelegate */,
+				D9F259BE1CABED55004F5BF1 /* Entity */,
 				D90D93591C72B90000343957 /* Models */,
 				D90D93581C72B8F400343957 /* Views */,
 				D90D93561C72B8AE00343957 /* ViewControllers */,
@@ -116,12 +114,19 @@
 				D9C490DD1C72AF9E00CE06D5 /* AppDelegate.swift */,
 				D9C490E11C72AF9E00CE06D5 /* Main.storyboard */,
 				D90D93801C8523AC00343957 /* TodoIt.xcdatamodeld */,
-				D90D93831C8526FC00343957 /* Todo.swift */,
 				D9C490E41C72AF9E00CE06D5 /* Assets.xcassets */,
 				D9C490E61C72AF9E00CE06D5 /* LaunchScreen.storyboard */,
 				D9C490E91C72AF9E00CE06D5 /* Info.plist */,
 			);
 			path = TodoIt;
+			sourceTree = "<group>";
+		};
+		D9F259BE1CABED55004F5BF1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D90D93831C8526FC00343957 /* Todo.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +203,6 @@
 			files = (
 				D90D93821C8523AC00343957 /* TodoIt.xcdatamodeld in Sources */,
 				D90D93841C8526FC00343957 /* Todo.swift in Sources */,
-				D90D935C1C73619300343957 /* ListViewDelegate.swift in Sources */,
 				D90D935E1C7B294100343957 /* AddTodoController.swift in Sources */,
 				D9C490F01C72AFE400CE06D5 /* ListViewController.swift in Sources */,
 				D9C490DE1C72AF9E00CE06D5 /* AppDelegate.swift in Sources */,

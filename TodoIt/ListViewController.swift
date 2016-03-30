@@ -68,10 +68,6 @@ class ListViewController : UITableViewController {
     }
     /**
      並び替えられた後の挙動
-     
-     - parameter tableView:            <#tableView description#>
-     - parameter sourceIndexPath:      <#sourceIndexPath description#>
-     - parameter destinationIndexPath: <#destinationIndexPath description#>
      */
     override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         let targetTitle = self.todos[sourceIndexPath.row]
