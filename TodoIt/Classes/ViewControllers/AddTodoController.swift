@@ -11,9 +11,8 @@ import CoreData
 
 class AddTodoController: UIViewController, UITextViewDelegate {
 
-    // TODOの編集時に格納される
+    // 編集時のTODOが格納される
     var editTodo:Todo?
-    
     // TODOが格納されるテキストフィールド
     @IBOutlet weak var textView: UITextView!
     

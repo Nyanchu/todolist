@@ -10,8 +10,9 @@ import UIKit
 import CoreData
 
 /*
- 親クラスのUIViewControllerを継承したほうが自由度が高そうだが、
- 一旦UITableViewControllerを継承しておく
+ TODO一覧表示コントローラ
+
+ TODO: UIViewControllerを継承したほうが自由度が高そう
 */
 class ListViewController : UITableViewController {
     
@@ -19,15 +20,36 @@ class ListViewController : UITableViewController {
     var context: NSManagedObjectContext?
     var todos = [Todo]()
     
-    // TODO: 本当はinitを使いたかったがわからず断念
+    /**
+     初期化
+     TODO: 本当はinit()を使いたかったがよくわからず一旦viewDidLoad()で
+    */
     override func viewDidLoad() {
         self.appDel = UIApplication.sharedApplication().delegate as? AppDelegate
         self.context = self.appDel!.managedObjectContext
+        
+        // 長押し時のイベント設定
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: "editTodos:")
+        longPressGesture.minimumPressDuration = 1.0
+        self.view.addGestureRecognizer(longPressGesture)
     }
     
     /**
-     読み込み開始時の処理
-     - parameter animated: <#animated description#>
+      編集モード切り替え
+     */
+    @IBAction func editTodos(sender: UILongPressGestureRecognizer) {
+        if editing {
+            super.setEditing(false, animated: true)
+            tableView.setEditing(false, animated: true)
+        } else {
+            // TOOD: 「+」ボタンを「完了」ボタンに切り替え、「完了」ボタンを押したら編集モード終了としたい
+            super.setEditing(true, animated: true)
+            tableView.setEditing(true, animated: true)
+        }
+    }
+    
+    /**
+     TODO一覧データ読み込み
      */
     override func viewWillAppear(animated: Bool) {
         self.todos = [Todo]()
@@ -60,14 +82,15 @@ class ListViewController : UITableViewController {
         cell.textLabel?.text = self.todos[indexPath.row].content
         return cell
     }
-    
     // テーブルの並び替え設定
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // 全てのセルが並び替え可能
         return true
     }
+    
     /**
      並び替えられた後の挙動
+     TODO: 仮でまだ動いていない
      */
     override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         let targetTitle = self.todos[sourceIndexPath.row]
@@ -95,6 +118,9 @@ class ListViewController : UITableViewController {
         }
     }
     
+    /**
+     TODOが押されたらAddTodoControllerに遷移
+     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let indexPath = self.tableView.indexPathForSelectedRow {
             let todo = self.todos[indexPath.row]
